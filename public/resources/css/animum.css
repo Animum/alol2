@@ -1,0 +1,603 @@
+
+/*
+ * DiseÃ±o Animum 2013
+ */
+
+/*
+ * Fuentes
+ */
+
+@font-face {
+	font-family: 'NeoSansStd-Regular';
+	src: url('../fonts/NeoSansStd-Regular.eot');
+	src: local('â˜º'), url('../fonts/NeoSansStd-Regular.woff') format('woff'), url('../fonts/NeoSansStd-Regular.ttf') format('truetype'), url('../fonts/NeoSansStd-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'NeoSansStd-Medium';
+	src: url('../fonts/NeoSansStd-Medium.eot');
+	src: local('â˜º'), url('../fonts/NeoSansStd-Medium.woff') format('woff'), url('../fonts/NeoSansStd-Medium.ttf') format('truetype'), url('../fonts/NeoSansStd-Medium.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'NeoSansStd-Bold';
+	src: url('../fonts/NeoSansStd-Bold.eot');
+	src: local('â˜º'), url('../fonts/NeoSansStd-Bold.woff') format('woff'), url('../fonts/NeoSansStd-Bold.ttf') format('truetype'), url('../fonts/NeoSansStd-Bold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+/*
+ * Elementos CSS
+ */
+
+
+a {
+    color: #C20D5F;
+    text-decoration: underline;
+}
+
+a:hover, a:focus {
+    color: rgba(194, 13, 95, 0.5);
+}
+
+body {
+  /* Margin bottom by footer height */
+  /*margin-bottom: 60px;*/
+}
+
+body,
+html {
+	height: 100%;
+	/* The html and body elements cannot have any padding or margin. */
+}
+
+body {
+  	font-family: NeoSansStd-Regular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 13px;
+	color: #532D5D;
+	background: #EBEBEB;
+}
+
+h1, h2, h3 {
+	font-family: NeoSansStd-Regular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+html {
+  position: relative;
+}
+
+form {
+	padding: 10px 0;
+}
+
+input[type=checkbox] {
+	vertical-align: middle;
+}
+
+footer {
+	border-top: 1px solid #CFCFCF;
+}
+
+legend {
+	color: #532D5D;
+	border-color: #DDD;
+}
+
+label {
+	width: 100%;
+}
+
+label.checkbox {
+	display: inline;
+	vertical-align: text-top;
+	padding-left: 5px;
+}
+
+nav {
+	font-weight: bold;
+}
+
+nav ul > li > a {
+	padding: 8px !important;
+	text-decoration: none;
+	background-color: white;
+	color: #532D5D;
+	border-radius: 1px !important;
+}
+
+nav ul > li > a:hover {
+	background-color: rgba(194, 13, 95, 0.1) !important;
+	color: #532D5D;
+}
+
+nav ul > li > a:focus,
+nav ul > li > a.active {
+    background-color: #C20D5F !important;
+    color: white !important;
+}
+
+
+/*
+ *	NAV HEADER
+ */
+
+/*
+ *	Botón de Show/Hide menú sidebar.
+ */
+nav.navigation.navigation--header > ul.nav-pills > li > a.toggle-sidebar {
+    cursor: pointer;
+}
+
+/*
+ *	Menú de opciones de la cabecera
+ */
+nav.navigation.navigation--header > ul.nav.navbar-right {
+	margin-right: 0;
+}
+
+/*
+ *	NAV SIDEBAR
+ */
+
+nav.navigation.navigation--sidebar ul > li > a > i.glyphicon {
+	font-size: 1.1em;
+}
+
+nav.navigation.navigation--sidebar ul ul li i {
+    margin-left: 16px;
+}
+
+/*
+ * Componentes bootstrap
+ */
+
+
+.dropdown-menu > li > a {
+	font-size: 0.9em;
+	color: #532D5D;
+	text-decoration: none;
+}
+
+.dropdown-menu > li > a:focus, 
+.dropdown-menu > li > a:hover {
+	background-color: rgba(194, 13, 95, 0.1);
+}
+
+.dropdown-menu > .active > a, 
+.dropdown-menu > .active > a:focus,
+.dropdown-menu > .active > a:hover {
+	color: #FFF;
+	background-color: rgb(194, 13, 95);
+}
+
+.glyphicon:empty {
+    margin-right: 6px;
+}
+
+.container {
+	padding: 20px;
+}
+
+.row {
+
+}
+
+.nav {
+	font-weight: bold;
+}
+
+.pagination > li > a, 
+.pagination > li > span {
+	font-size: 1.2em;
+	border: 0;
+	margin-left: 1px;
+	text-decoration: none;
+}
+
+.nav .open > a .caret, 
+.nav .open > a:focus .caret,
+.navbar .open > a .caret,
+.navbar .open > a:focus .caret {
+	border-bottom-color: #FFF !important;
+	border-top-color: #FFF !important;
+	text-decoration: none;
+}
+
+.nav li > a.active .caret,
+.navbar li > a.active .caret  {
+	border-bottom-color: #FFF !important;
+	border-top-color: #FFF !important;
+}
+
+.nav li > a .caret, 
+.navbar li > a .caret {
+	border-bottom-color: #532D5D;
+	border-top-color: #532D5D;
+}
+
+.nav li > a:focus .caret, 
+.navbar li > a:focus .caret {
+	border-bottom-color: #FFF !important;
+	border-top-color: #FFF !important;
+}
+
+.nav li > a.hover .caret, 
+.nav li > a:hover .caret, 
+.navbar li > a.hover .caret, 
+.navbar li > a:hover .caret {
+	border-bottom-color: #532D5D;
+	border-top-color: #532D5D;
+}
+
+.nav > li > a,
+.navbar-nav > li > a {
+	padding: 8px;
+	text-decoration: none;
+}
+
+.nav > li > a,
+.navbar-nav > li > a,
+.pagination > li > a {
+	background-color: white !important;
+	color: #532D5D !important;
+	border-radius: 0px !important;
+	text-decoration: none;
+}
+
+.nav > li > a:hover, 
+.navbar-nav > li > a:hover, 
+.pagination > li > a:hover {
+	background-color: rgba(194, 13, 95, 0.1) !important; /* rgb(194, 13, 95 ) == #C20D5F */
+	color: #532D5D !important;
+	border-color: white !important;
+}
+
+.nav > li > a:focus, 
+.navbar-nav > li > a:focus,
+.pagination > li > a:focus {
+    background-color: #C20D5F !important;
+    color: white !important;
+	border-color: white !important;
+}
+
+.nav > li > a.active, 
+.pagination > li > a.active {
+    background-color: #C20D5F !important;
+    color: white !important;
+    border-color: white;
+}
+
+.nav-pills > li + li,
+.navbar-nav > li + li {
+	margin-left: 1px;
+}
+
+.nav-pills > li > a,
+.navbar-nav > li > a {
+	border-radius: 0px;
+}
+
+.nav > .dropdown > .dropdown-menu > li > a,
+.nav > li > .dropdown-menu > li > a {
+	font-size: 0.9em;
+	color: #532D5D;
+	text-decoration: none;
+}
+
+.panel {
+	border-radius: 0 !important;
+	margin: 20px 0 !important;
+}
+
+.panel .panel-heading:after {
+	clear: both;
+}
+
+.panel .panel-heading:before, .panel-heading:after {
+	content: " ";
+	display: table;
+}
+
+.panel > .panel-heading {
+	background: #EEE;
+}
+
+.media {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding: 0;
+}
+
+.media:first-child {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.media > .media-body {
+	margin-top: 10px;
+}
+
+.media > .media-body > p {
+	margin-bottom: 0px;
+}
+
+.media > .media-body > p > a > span.glyphicon {
+	font-size: 1.6em;
+	margin-right: 10px;
+}
+
+.table > thead > tr > th, 
+.table > tbody > tr > th, 
+.table > tfoot > tr > th, 
+.table > thead > tr > td, 
+.table > tbody > tr > td, 
+.table > tfoot > tr > td {
+	padding: 5px;
+}
+
+.table > tbody > tr > td > .media {
+	margin-bottom: 0;
+}
+
+.input-group-btn {
+	vertical-align: bottom;
+}
+
+.btn-primary {
+    background-color: #C20D5F;
+    border-color: rgba(194, 13, 95, 0.1);
+    color: #FFFFFF;
+}
+
+.btn-primary:hover, 
+.btn-primary:focus, 
+.btn-primary:active, 
+.btn-primary.active, 
+.open .dropdown-toggle.btn-primary {
+    background-color: rgba(194, 13, 95, 0.5);
+    border-color: rgba(194, 13, 95, 0.1);
+    color: #FFFFFF;
+}
+
+/* 
+ * Bloques de la Rejilla 
+ */
+
+/*
+ * Base
+ */
+
+.base {
+    background-color: #f7f7f7;
+    height: 100%;
+    padding-left: 240px;
+    transition: all 0.4s ease 0s;
+}
+
+.base.base--collapse {
+    padding-left: 0;
+}
+
+.base.base--collapse .sidebar {
+    left: -248px;
+}
+
+/*
+ *	Alertas
+ */
+.alerts {
+	margin-bottom: 16px;
+}
+
+/*
+ * Page
+ */
+
+.page {
+    background: none repeat scroll 0 0 #f7f7f7;
+    margin: 0;
+    padding: 0;
+}
+
+.page .page__navbar {
+    margin-bottom: 16px;
+    background-color: #FFF;
+}
+
+.page .page__header {
+    margin-bottom: 16px;
+}
+
+.page .page__content {
+
+}
+
+.container-fluid {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/*
+ * Sidebar
+ */
+
+.sidebar {
+    background: none repeat scroll 0 0 #fff;
+    border-right: 1px solid #e6e6e6;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    margin-left: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    transition: all 0.4s ease 0s;
+    width: 240px;
+    z-index: 1200;
+}
+
+.sidebar > .sidebar__brand {
+	margin: 1.5em 0;
+}
+
+.sidebar > .sidebar__brand > figure {
+    margin: 0 auto;
+    padding: 8px 0;
+    text-align: center;
+    width: 100%;
+}
+
+.sidebar > .sidebar__brand > figure > a {
+    text-decoration: none;
+}
+
+.sidebar > .sidebar__brand > figure img {
+    width: 75%;
+}
+
+.sidebar > .sidebar__brand > figure figcaption {
+    font-weight: bold;
+}
+
+.sidebar > .sidebar__brand > figure figcaption > span {
+    display: block;
+    font-size: 0.6em;
+    font-weight: normal;
+    letter-spacing: 1px;
+    padding: 4px 0;
+}
+
+.sidebar > .navigation.navigation--sidebar {
+    border-top: 1px solid #e6e6e6;
+}
+
+.sidebar > .navigation.navigation--sidebar ul {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar > .navigation.navigation--sidebar ul li {
+    border-top: 1px solid #e6e6e6;
+    display: block;
+}
+
+.sidebar > .navigation.navigation--sidebar ul a {
+    text-decoration: none;
+    display: block;
+}
+
+.sidebar > .navigation.navigation--sidebar ul li i, 
+.sidebar > .navigation.navigation--sidebar ul li span {
+    display: inline-block;
+    line-height: 36px;
+    min-width: 36px;
+    text-align: center;
+}
+
+.sidebar > .navigation.navigation--sidebar ul li a .children {
+    float: right;
+    padding-right: 4px;
+}
+
+.sidebar > .navigation.navigation--sidebar .item.dropdown a > .children:after {
+	font-family: "Glyphicons Halflings";
+    content: "\e250";
+}
+
+.sidebar > .navigation.navigation--sidebar .item.dropdown.active a > .children:after {
+	font-family: "Glyphicons Halflings";
+    content: "\e252";
+}
+
+.sidebar > .sidebar__copyright {
+    border-top: 1px solid #e6e6e6;
+    font-size: 10px;
+    padding: 24px 0 0;
+    text-align: center;
+}
+
+
+
+
+
+
+
+/*
+ * Filas
+ */
+
+
+/*
+ * Fila4: content-section
+ */
+
+/* sidebar1 */
+.row4 > .sidebar1 {
+	padding: 20px 20px 0 20px;
+}
+
+.row4 > .sidebar1 > .nav {
+	width: 100%;
+}
+
+.row4 > .sidebar1 > .nav > li {
+	text-align: right;
+	font-size: 1.3em;
+}
+
+/* Content-section */
+.row4 > .contents-zone {
+	padding: 20px 20px 0 20px;
+}
+
+/* mensajes */
+.row4 > .contents-zone > .row > .mensaje {
+	padding: 20px;
+	margin: 20px;
+}
+
+/* Content */
+.row4 > .contents-zone > .row > .content {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.row4 > .contents-zone > .row > .content > h3.first {
+	margin-top: 10px;
+}
+
+.row4 > .contents-zone > .row > .content h3:first-child {
+	margin-top: 10px;
+}
+
+.row4 > .contents-zone > .row > .content > p {
+	margin-left: 30px;
+}
+
+.row4 > .contents-zone > .row > .content > .table-responsive > table {
+	margin-left: 30px;
+	width: 95%;
+}
+
+.row4 > .contents-zone > .row > .content > ol,
+.row4 > .contents-zone > .row > .content > ul {
+	margin-left: 10px;
+}
+
+.row4 > .contents-zone > .row > .content > .calendario {
+	padding: 20px;
+}
+
+.row4 > .contents-zone > .row > .content > .nav-pills.opciones-convocatoria {
+	border-bottom: 1px solid #DDD;
+	margin-left: 0;
+}
